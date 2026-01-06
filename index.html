@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطاحن روتانا للغلال | ريادة الأمن الغذائي في السودان</title>
+    <meta name="description" content="مطاحن روتانا - الخيار الأول للدقيق الفاخر في السودان. جودة عالمية، إنتاجية ضخمة، وشراكة تدعم نجاحك.">
+    
+    <!-- Google Fonts: Alexandria for modern, geometric Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <style>
+    :root {
+  /* Rotana Brand Colors */
+  --rotana-primary: #006838;
+  --rotana-dark: #004d2a;
+  --rotana-light: #008549;
+  --rotana-gold: #C5A059;
+
+  /* Font */
+  --font-sans: 'Alexandria', sans-serif;
+}
+body {
+  font-family: var(--font-sans);
+}
+.bg-rotana {
+  background-color: var(--rotana-primary);
+}
+
+.bg-rotana-dark {
+  background-color: var(--rotana-dark);
+}
+
+.bg-rotana-light {
+  background-color: var(--rotana-light);
+}
+
+.text-rotana {
+  color: var(--rotana-primary);
+}
+
+.text-gold {
+  color: var(--rotana-gold);
+}
+
+.border-rotana {
+  border-color: var(--rotana-primary);
+}
+
+        /* Custom Utilities */
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 104, 56, 0.85), rgba(0, 50, 20, 0.9)), url('https://rotanaflourmills.com/wp-content/uploads/2023/03/about-us-home-1.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Smooth Details Summary */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        /* Loading Spinner for Images */
+        .image-container {
+            background-color: #f3f4f6;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <img src="logo.png" alt="Rotana Logo" class="h-12 md:h-14 object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 font-semibold text-gray-700">
+                <a href="#about" class="hover:text-rotana transition-colors">عن الشركة</a>
+                <a href="#products" class="hover:text-rotana transition-colors">منتجاتنا</a>
+                <a href="#quality" class="hover:text-rotana transition-colors">الجودة</a>
+                <a href="#impact" class="hover:text-rotana transition-colors">أرقامنا</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://wa.me/+249183286862" target="_blank" class="hidden md:flex items-center gap-2 bg-rotana hover:bg-rotana-dark text-white px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg">
+                <i class="fab fa-whatsapp text-xl"></i>
+                <span>اطلب الآن</span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-rotana text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden bg-white border-t border-gray-100 md:hidden absolute w-full left-0 top-full shadow-lg">
+            <div class="flex flex-col p-4 gap-4 font-semibold text-center">
+                <a href="#about" class="py-2 border-b border-gray-100">عن الشركة</a>
+                <a href="#products" class="py-2 border-b border-gray-100">منتجاتنا</a>
+                <a href="#quality" class="py-2 border-b border-gray-100">الجودة</a>
+                <a href="https://wa.me/+249183286862" class="bg-green-500 text-white py-3 rounded-lg flex justify-center items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> تواصل معنا
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center hero-gradient text-white px-4">
+        <div class="container mx-auto text-center max-w-4xl" data-aos="fade-up">
+            <span class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-1 rounded-full text-sm md:text-base font-medium mb-6 inline-block">
+                فخر الصناعة السودانية 🇸🇩
+            </span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                دقة في الطحن.. <br>
+                <span class="text-rotana-gold">وثقة في الخبز</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-100 mb-8 max-w-2xl mx-auto leading-relaxed opacity-90">
+                شريكك الاستراتيجي للأمن الغذائي بطاقة إنتاجية 1000 طن يومياً. نضمن لك الجودة، الاستمرارية، ونجاح منتجك النهائي.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/+249183286862" class="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-green-900/50 flex items-center justify-center gap-2 animate-pulse-slow">
+                    <i class="fab fa-whatsapp"></i>
+                    تعاقد معنا الآن
+                </a>
+                <a href="#products" class="w-full md:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-rotana text-white px-8 py-4 rounded-full font-bold text-lg transition-all">
+                    استكشف منتجاتنا
+                </a>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="mt-12 flex flex-wrap justify-center gap-6 md:gap-12 opacity-80 text-sm md:text-base">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check-circle text-rotana-gold"></i> إنتاج يومي مستمر
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-certificate text-rotana-gold"></i> مواصفات عالمية
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-truck text-rotana-gold"></i> تغطية 18 ولاية
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-white/50"></i>
+        </div>
+    </header>
+
+    <!-- Stats Section (Social Proof) -->
+    <section class="py-12 bg-white relative -mt-10 z-10 shadow-lg mx-4 md:mx-12 rounded-2xl" id="impact">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x md:divide-x-reverse divide-gray-100">
+                <div class="p-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl md:text-5xl font-bold text-rotana mb-2 counter" data-target="18">0</div>
+                    <div class="text-gray-500 font-medium">ولاية نغطيها</div>
+                </div>
+                <div class="p-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl md:text-5xl font-bold text-rotana mb-2 counter" data-target="23">0</div>
+                    <div class="text-gray-500 font-medium">مليون عميل</div>
+                </div>
+                <div class="p-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl md:text-5xl font-bold text-rotana mb-2 dir-ltr">
+                        <span class="counter" data-target="1000">0</span>+
+                    </div>
+                    <div class="text-gray-500 font-medium">طن إنتاج يومي</div>
+                </div>
+                <div class="p-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-3xl md:text-5xl font-bold text-rotana mb-2">
+                        <span class="counter" data-target="2014">0</span>
+                    </div>
+                    <div class="text-gray-500 font-medium">تاريخ التأسيس</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Amplification -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">هل تعاني من تقلبات سوق الدقيق؟</h2>
+                <p class="text-gray-600 text-lg">نعلم أن استقرار مخبزك أو مشروعك يعتمد على جودة المواد الخام.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Problem 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-red-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-2xl mb-6 mx-auto">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">تذبذب الجودة</h3>
+                    <p class="text-gray-600 text-center text-sm leading-relaxed">
+                        تغير خصائص الدقيق يفسد الوصفات ويؤدي لخسائر في المنتج النهائي وسمعة المخبز.
+                    </p>
+                </div>
+                
+                <!-- Problem 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-orange-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-2xl mb-6 mx-auto">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">انقطاع الإمداد</h3>
+                    <p class="text-gray-600 text-center text-sm leading-relaxed">
+                        تأخر التوريد يعطل خطوط الإنتاج ويجعلك تخسر عملاءك لصالح المنافسين.
+                    </p>
+                </div>
+
+                <!-- Problem 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-gray-400" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 text-2xl mb-6 mx-auto">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">شوائب وشكوك</h3>
+                    <p class="text-gray-600 text-center text-sm leading-relaxed">
+                        عدم نقاء الدقيق يؤثر على صحة المستهلك وجودة المخبوزات، مما يضع علامتك في خطر.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution (About Us) -->
+    <section id="about" class="py-20 bg-white overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                
+                <!-- Image Grid -->
+                <div class="w-full lg:w-1/2 relative" data-aos="fade-left">
+                    <div class="relative z-10 grid grid-cols-2 gap-4">
+                        <img src="https://rotanaflourmills.com/wp-content/uploads/2023/03/about-us-home-1.webp" alt="مصنع روتانا" class="rounded-2xl shadow-xl w-full h-64 object-cover transform translate-y-8">
+                        <img src="https://rotanaflourmills.com/wp-content/uploads/2023/03/about-us-home-2.webp" alt="إنتاج الدقيق" class="rounded-2xl shadow-xl w-full h-64 object-cover">
+                    </div>
+                    <!-- Decorative Circle -->
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-rotana/10 rounded-full blur-3xl -z-0"></div>
+                </div>
+
+                <!-- Content -->
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <div class="flex items-center gap-2 text-rotana font-bold uppercase tracking-wider mb-4">
+                        <span class="w-10 h-1 bg-rotana"></span>
+                        لماذا روتانا هي الحل؟
+                    </div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                        أحدث التقنيات لضمان <span class="text-rotana">الأمن الغذائي</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        تأسست مطاحن روتانا في أبريل 2014 لتكون ركيزة للاقتصاد الوطني. بقدرة إنتاجية تصل إلى 1000 طن يومياً، نستخدم أحدث التقنيات السويسرية لضمان دقيق نقي، مستقر، وآمن.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-rotana mt-1"></i>
+                            <div>
+                                <strong class="text-gray-900">شراكات موثوقة:</strong> نلتزم بمواعيد التسليم بدقة متناهية.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-rotana mt-1"></i>
+                            <div>
+                                <strong class="text-gray-900">جودة بلا تنازل:</strong> معايير دولية في التنقية والطحن.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-rotana mt-1"></i>
+                            <div>
+                                <strong class="text-gray-900">فخر وطني:</strong> منتج سوداني ينافس الجودة العالمية.
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#products" class="inline-flex items-center gap-2 text-rotana font-bold hover:gap-4 transition-all group">
+                        شاهد منتجاتنا
+                        <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chairman Message -->
+    <section class="py-20 bg-gray-900 text-white relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="bg-rotana rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/3">
+                    <div class="relative">
+                        <img src="https://rotanaflourmills.com/wp-content/uploads/2024/06/Chairman-L-768x803.jpg" alt="محمد يوسف موسى" class="rounded-xl shadow-lg border-4 border-rotana-gold/30 w-full object-cover aspect-[3/4]">
+                        <div class="absolute -bottom-6 right-6 bg-white text-rotana px-6 py-3 rounded-lg shadow-lg">
+                            <p class="font-bold text-lg">محمد يوسف موسى</p>
+                            <p class="text-sm opacity-80">رئيس مجلس الإدارة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3 text-center md:text-right">
+                    <i class="fas fa-quote-right text-6xl text-rotana-gold/20 mb-6 block"></i>
+                    <h3 class="text-3xl font-bold mb-6">رؤيتنا تتجاوز الطحن.. نحن نبني المستقبل</h3>
+                    <p class="text-xl leading-relaxed text-gray-100 italic mb-8">
+                        "في روتانا، لا ننتج الدقيق فحسب، بل نصنع الثقة. التزامنا يتجاوز مجرد البيع والشراء؛ إنه التزام تجاه كل أسرة سودانية بتوفير غذاء آمن، صحي، وبأعلى معايير الجودة العالمية. نحن نستثمر في أحدث التقنيات وكوادرنا المؤهلة لنضمن أن روتانا هي الخيار الأول والأكثر أماناً."
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">#الإنسان_أولاً</span>
+                        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">#الجودة_المستدامة</span>
+                        <span class="px-4 py-2 bg-white/10 rounded-full text-sm">#اقتصاد_السودان</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-rotana font-bold tracking-wider uppercase">تنوع يلبي كل الاحتياجات</span>
+                <h2 class="text-4xl font-bold text-gray-900 mt-2">منتجاتنا المميزة</h2>
+                <div class="w-24 h-1 bg-rotana mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Product 1 -->
+                <div class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="0">
+                    <div class="h-64 flex items-center justify-center bg-gray-50 rounded-xl mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-rotana/5 group-hover:bg-rotana/10 transition-colors"></div>
+                        <img src="https://rotanaflourmills.com/wp-content/uploads/2023/03/Momayaz.webp" alt="دقيق فاخر" class="h-48 object-contain transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute top-4 left-4 bg-rotana text-white text-xs font-bold px-3 py-1 rounded-full">الأكثر مبيعاً</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">دقيق فاخر (مميز)</h3>
+                    <p class="text-gray-500 mb-4 text-sm">مثالي للمخبوزات المنزلية والكيك والمعجنات الفاخرة.</p>
+                    <div class="mt-auto flex items-center justify-between">
+                        <span class="font-bold text-lg text-rotana">1 كجم</span>
+                        <a href="https://wa.me/+249183286862?text=أرغب في طلب دقيق فاخر 1 كجم" class="text-rotana border border-rotana hover:bg-rotana hover:text-white px-4 py-2 rounded-lg transition-colors text-sm font-bold">
+                            اطلب الآن
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 flex items-center justify-center bg-gray-50 rounded-xl mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-yellow-400/5 group-hover:bg-yellow-400/10 transition-colors"></div>
+                        <img src="https://rotanaflourmills.com/wp-content/uploads/2023/04/Yellow.webp" alt="دقيق أصفر" class="h-48 object-contain transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">دقيق أصفر</h3>
+                    <p class="text-gray-500 mb-4 text-sm">غني بالألياف والعناصر الغذائية، خيار صحي للمخابز.</p>
+                    <div class="mt-auto flex items-center justify-between">
+                        <span class="font-bold text-lg text-rotana">25 كجم</span>
+                        <a href="https://wa.me/+249183286862?text=أرغب في طلب دقيق أصفر 25 كجم" class="text-rotana border border-rotana hover:bg-rotana hover:text-white px-4 py-2 rounded-lg transition-colors text-sm font-bold">
+                            اطلب الكميات
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 flex items-center justify-center bg-gray-50 rounded-xl mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-orange-400/5 group-hover:bg-orange-400/10 transition-colors"></div>
+                        <img src="https://rotanaflourmills.com/wp-content/uploads/2023/04/Bran.webp" alt="ردة" class="h-48 object-contain transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">ردة (نخالة)</h3>
+                    <p class="text-gray-500 mb-4 text-sm">علف عالي الجودة للماشية أو استخدامات صناعية متعددة.</p>
+                    <div class="mt-auto flex items-center justify-between">
+                        <span class="font-bold text-lg text-rotana">40 كجم</span>
+                        <a href="https://wa.me/+249183286862?text=أرغب في طلب ردة 40 كجم" class="text-rotana border border-rotana hover:bg-rotana hover:text-white px-4 py-2 rounded-lg transition-colors text-sm font-bold">
+                            اطلب الكميات
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                 <p class="text-gray-600 mb-4">نوفر أيضاً عبوات 50 كجم للمخابز والمصانع الكبرى</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-16 bg-white border-y border-gray-100">
+        <div class="container mx-auto px-4 text-center max-w-3xl" data-aos="zoom-in">
+            <div class="text-rotana text-4xl mb-6"><i class="fas fa-quote-right"></i></div>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 leading-normal">
+                "شكراً جزيلاً على هذه المنتجات الرائعة التي فاقت توقعاتي، أنصح الجميع بالتعامل مع مطاحن روتانا للدقة والجودة."
+            </h3>
+            <div class="flex items-center justify-center gap-4">
+                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="text-right">
+                    <p class="font-bold text-gray-900">أحمد السعيد</p>
+                    <p class="text-sm text-gray-500">مدير قسم إنتاج</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">الأسئلة الشائعة</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-white rounded-lg shadow-sm open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 font-bold text-gray-800">
+                        هل تقومون بالتوصيل للولايات خارج الخرطوم؟
+                        <span class="transition-transform group-open:rotate-180 text-rotana"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4">
+                        نعم، شبكة توزيعنا تغطي 18 ولاية في السودان. لدينا أسطول نقل مجهز لضمان وصول المنتج بحالته الممتازة أينما كنت.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg shadow-sm open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 font-bold text-gray-800">
+                        ما هي أقل كمية يمكن طلبها كتاجر جملة؟
+                        <span class="transition-transform group-open:rotate-180 text-rotana"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4">
+                        نحن مرنون في التعامل مع شركائنا. يرجى التواصل معنا عبر الواتساب لتحديد الكميات المناسبة لاحتياجاتك والحصول على عرض سعر خاص.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg shadow-sm open:shadow-md transition-all">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 font-bold text-gray-800">
+                        كيف تضمنون جودة الدقيق؟
+                        <span class="transition-transform group-open:rotate-180 text-rotana"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4">
+                        نستخدم أحدث التقنيات السويسرية في الطحن، ونخضع كل شحنة لفحوصات مخبرية دقيقة وفق المواصفات الدولية قبل التعبئة.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-rotana text-white text-center px-4 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        <div class="relative z-10 container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">جاهز لرفع جودة إنتاجك؟</h2>
+            <p class="text-xl opacity-90 mb-10">
+                لا تخاطر بجودة مخبوزاتك. انضم إلى آلاف الشركاء الذين يعتمدون على مطاحن روتانا يومياً.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/+249183286862" class="bg-white text-rotana hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-xl transition-all shadow-xl transform hover:scale-105 flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> تواصل معنا الآن
+                </a>
+                <a href="mailto:info@rotanaflourmills.com" class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full font-bold text-xl transition-all">
+                    راسلنا عبر البريد
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <img src="https://rotanaflourmills.com/wp-content/uploads/2023/03/logo-horizontal.webp" alt="Rotana Footer Logo" class="h-12 brightness-0 invert mb-4 opacity-80">
+                    <p class="text-sm leading-relaxed max-w-sm">
+                        مطاحن روتانا للغلال. ريادة في الأمن الغذائي، جودة مستدامة، وفخر للصناعة السودانية منذ 2014.
+                    </p>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-rotana-gold transition-colors">من نحن</a></li>
+                        <li><a href="#products" class="hover:text-rotana-gold transition-colors">المنتجات</a></li>
+                        <li><a href="#impact" class="hover:text-rotana-gold transition-colors">أرقامنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">تواصل معنا</h4>
+                    <ul class="space-y-2 text-sm">
+                      
+                        <li class="flex gap-4 mt-4">
+                            <a href="https://www.facebook.com/rotanaflourmills" class="text-xl hover:text-blue-500 transition-colors"><i class="fab fa-facebook"></i></a>
+                            <a href="https://x.com/rotanaflourmill" class="text-xl hover:text-black transition-colors"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/rotanaflourmill/" class="text-xl hover:text-pink-500 transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/rotana-flour-mills/about/" class="text-xl hover:text-blue-700 transition-colors"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://youtube.com/@rotanaflourmills" class="text-xl hover:text-red-600 transition-colors"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-xs">
+                &copy; 2026 مطاحن روتانا للغلال. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init AOS (Scroll Animations)
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('py-3');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.remove('py-2');
+                nav.classList.add('py-3');
+            }
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Trigger Counter Animation when section is visible
+        let hasAnimated = false;
+        const impactSection = document.getElementById('impact');
+        
+        window.addEventListener('scroll', () => {
+            if (!hasAnimated && window.scrollY + window.innerHeight > impactSection.offsetTop) {
+                animateCounters();
+                hasAnimated = true;
+            }
+        });
+
+    </script>
+</body>
+</html>
